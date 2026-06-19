@@ -154,14 +154,14 @@ const GithubSettingsForm = ({
 							<Select
 								aria-label="GitHub repository"
 								placeholder="Search repos..."
-							onValueChange={(repo) =>
-								formStore.setValue(
-									formStore.names.githubRepo,
-									repo.value as string,
-								)
-							}
-							value={formState.values.githubRepo ?? undefined}
-							options={githubOptions}
+								onValueChange={(repo) =>
+									formStore.setValue(
+										formStore.names.githubRepo,
+										repo.value as string,
+									)
+								}
+								value={formState.values.githubRepo ?? undefined}
+								options={githubOptions}
 								filterable
 							/>
 						</Box>
