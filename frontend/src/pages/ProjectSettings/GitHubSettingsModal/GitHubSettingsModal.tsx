@@ -150,10 +150,10 @@ const GithubSettingsForm = ({
 					name="githubRepo"
 				>
 					<Box display="flex" alignItems="center" gap="8">
-						<Select
-							aria-label="GitHub repository"
-							className={styles.repoSelect}
-							placeholder="Search repos..."
+						<Box cssClass={styles.repoSelect}>
+							<Select
+								aria-label="GitHub repository"
+								placeholder="Search repos..."
 							onValueChange={(repo) =>
 								formStore.setValue(
 									formStore.names.githubRepo,
@@ -162,8 +162,9 @@ const GithubSettingsForm = ({
 							}
 							value={formState.values.githubRepo ?? undefined}
 							options={githubOptions}
-							filterable
-						/>
+								filterable
+							/>
+						</Box>
 						<ButtonIcon
 							kind="secondary"
 							emphasis="medium"
